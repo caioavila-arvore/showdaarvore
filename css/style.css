@@ -127,3 +127,14 @@ html, body{
     -moz-animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
+
+
+video{
+	width: calc(100% - 500px);
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1;
+	background: #e0e0e0;
+}
