@@ -1,0 +1,129 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.bar{
+	position: fixed;
+	width: 560px;
+	height: 100%;
+	border-right: 4px solid #abbfff;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	background: url(../img/bg_bar.png) repeat-y;
+}
+
+.bar img{
+	display: block;
+	margin: 0 auto;
+	padding-top: 72px;
+}
+
+.question{
+	width: 540px;
+	height: 182px;
+	position: absolute;
+	top: 324px;
+	left: -52px;
+	border: 3px solid #fff;
+
+	background: url(../img/bg_question.png) no-repeat #e33c0f;
+	background-size: 100% 100%;
+	border-radius: 30px;
+
+	
+	font-size: 30px;
+	text-align: right;
+	color: #fff;
+
+	padding: 15px 30px 15px 90px;
+}
+
+.question .v_align{
+	width: 600px;
+	height: 170px;
+	display: table-cell;
+	text-align: right;
+	vertical-align: middle;
+}
+
+
+.options{
+	position: absolute;
+	top: 600px;
+	left: 10px;
+}
+
+
+.options li{
+	list-style: none;
+	width: 445px;
+	height: 62px;
+	border: 3px solid #fff;
+
+	background: #e33c0f;
+
+	border-radius: 15px;
+	background-size: 445px 77px;
+
+	margin-bottom: 23px;;
+	font-size: 30px;
+	color: #fff;
+	padding-top: 15px
+
+}
+
+
+.options li span{
+	display: inline-block;
+	width: 50px;
+	height: 42px;
+	border-radius: 50%;
+	background: #fff;
+	text-align: center;
+	font-size: 30px;
+	color: #23437e;
+	padding-top: 8px;
+	margin: 0 10px;
+}
+
+.options li.selected { border-color: yellow; }
+
+
+
+@-webkit-keyframes correct{
+    from {background-color: #e33c0f;}
+    20% {background-color: #6fd11f;}
+    30% {background-color: #e33c0f;}
+    40% {background-color: #6fd11f;}
+    50% {background-color: #e33c0f;}
+    70% {background-color: #6fd11f;}
+    90% {background-color: #e33c0f;}
+    to {background-color: #6fd11f;}
+}
+
+@-moz-keyframes correctX{
+    from {background-color: #e33c0f;}
+    20% {background-color: #6fd11f;}
+    30% {background-color: #e33c0f;}
+    40% {background-color: #6fd11f;}
+    50% {background-color: #e33c0f;}
+    70% {background-color: #6fd11f;}
+    90% {background-color: #e33c0f;}
+    to {background-color: #6fd11f;}
+}
+
+.correct{
+	-webkit-animation-name: correct;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: correctX;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
