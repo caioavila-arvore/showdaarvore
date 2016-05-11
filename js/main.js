@@ -1,5 +1,9 @@
 var current_question
 
+var audio = document.createElement('audio');
+audio.src = 'music/new_question_final.mp3'
+
+
 function display_question(question) {
   change_elements_text(question)
   create_events_for_question(question)
@@ -86,10 +90,9 @@ function key_press(){
 
     if(e.keyCode == 110){
       // n
-
       $(".options li").removeClass("correct");
       $(".options li").removeClass("selected");
-      start()
+      start();
     }
 
   });
@@ -101,6 +104,7 @@ function start() {
   current_question = questions[id_question]
   console.log(current_question)
   display_question(current_question)
+  audio.play();
 }
 
 
